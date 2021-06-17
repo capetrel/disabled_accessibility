@@ -45,7 +45,7 @@ class DisabledAccessibilitySettingsForm extends ConfigFormBase {
       '#type' => 'radios',
       '#title' => $this->t('Afficher les choix de hauteur de ligne'),
       '#options' => ['allow_line_height' => $this->t('Afficher'), 'disallow_line_height' => $this->t('Masquer')],
-      '#default_value' => is_null($config->get('allow_line_height_buttons')) ? 'allow_animation' : $config->get('allow_line_height_buttons'),
+      '#default_value' => is_null($config->get('allow_line_height_buttons')) ? 'allow_line_height' : $config->get('allow_line_height_buttons'),
       '#weight' => '2',
     ];
     $form['allow_theme_buttons'] = [
@@ -59,13 +59,13 @@ class DisabledAccessibilitySettingsForm extends ConfigFormBase {
       '#type' => 'radios',
       '#title' => $this->t('Afficher les choix du contrast'),
       '#options' => ['allow_contrast' => $this->t('Afficher'), 'disallow_contrast' => $this->t('Masquer')],
-      '#default_value' => is_null($config->get('allow_contrast_buttons')) ? 'allow_animation' : $config->get('allow_contrast_buttons'),
+      '#default_value' => is_null($config->get('allow_contrast_buttons')) ? 'allow_contrast' : $config->get('allow_contrast_buttons'),
       '#weight' => '4',
     ];
     $form['cookie_duration_days'] = [
       '#type' => 'number',
       '#title' => $this->t('Durée du cookie en jours'),
-      '#description' => $this->t('(Minimum 1 jour, maximum 350 jours)'),
+      '#description' => $this->t('(Minimum 1 jour, maximum 365 jours)'),
       '#default_value' => is_null($config->get('cookie_duration_days')) ? 7 : $config->get('cookie_duration_days'),
       '#weight' => '5',
     ];
