@@ -1,43 +1,43 @@
-#efil-accessibility-form .accessibility-form_content {
+#disabled-accessibility-form .accessibility-form_content {
   display: flex;
   font-family: sans-serif;
   font-size: 0.9em;
 }
-#efil-accessibility-form .accessibility-form_content .form-composite {
+#disabled-accessibility-form .accessibility-form_content .form-composite {
   border-right: solid 1px #4a4a4a;
   border-radius: 0;
   margin: 0 10px;
   padding: 0 10px;
   text-align: left;
 }
-#efil-accessibility-form .accessibility-form_content .form-composite:first-child {
+#disabled-accessibility-form .accessibility-form_content .form-composite:first-child {
   margin-left: 0;
   padding-left: 0;
 }
-#efil-accessibility-form .accessibility-form_content .form-composite:last-child {
+#disabled-accessibility-form .accessibility-form_content .form-composite:last-child {
   margin-right: 0;
   padding-right: 0;
   border-right: none;
 }
-#efil-accessibility-form .accessibility-form_content .form-composite .form-radios {
+#disabled-accessibility-form .accessibility-form_content .form-composite .form-radios {
   display: flex;
 }
-#efil-accessibility-form .accessibility-form_content .form-composite .form-radios input[type=radio] {
+#disabled-accessibility-form .accessibility-form_content .form-composite .form-radios input[type=radio] {
   display: none;
 }
-#efil-accessibility-form .accessibility-form_content .form-composite .form-radios label.option {
+#disabled-accessibility-form .accessibility-form_content .form-composite .form-radios label.option {
   display: block !important;
   margin-left: 0;
   margin-right: 15px;
   color: darkgray;
   cursor: pointer;
 }
-#efil-accessibility-form .accessibility-form_content .form-composite .form-radios label.option :last-child {
+#disabled-accessibility-form .accessibility-form_content .form-composite .form-radios label.option :last-child {
   margin-right: 0;
 }
-#efil-accessibility-form .accessibility-form_content .form-composite .form-radios label.option.is-on {
+#disabled-accessibility-form .accessibility-form_content .form-composite .form-radios label.option.is-on {
   color: green;
   cursor: default;
 }
 
-/*# sourceMappingURL=efil_accessibility.css.map */
+/*# sourceMappingURL=disabled_accessibility.css.map */

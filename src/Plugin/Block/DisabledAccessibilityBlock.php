@@ -57,7 +57,7 @@ class DisabledAccessibilityBlock extends BlockBase implements ContainerFactoryPl
    * @return array A render array.
    */
   public function build() {
-    return $this->formBuilder->getForm(EfilAccessibilityForm::class);
+    return $this->formBuilder->getForm(DisabledAccessibilityForm::class);
   }
 
 }

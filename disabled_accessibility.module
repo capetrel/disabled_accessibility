@@ -8,8 +8,8 @@ use Drupal\Core\Routing\RouteMatchInterface;
 function disabled_accessibility_help($route_name, RouteMatchInterface $route_match) {
   $html = '';
   switch ($route_name) {
-    case 'help.page.efil_accessibility':
-      $html = t('Module d\'accessibilité<br><br><a href="/admin/config/system/efil_accessibility/config" title="page de configuration">Page de configuration</a><br>');
+    case 'help.page.disabled_accessibility':
+      $html = t('Module d\'accessibilité<br><br><a href="/admin/config/system/disabled_accessibility/config" title="page de configuration">Page de configuration</a><br>');
       $html .= t('Nom des classes css utilisé (body et input) : activate_anime, deactive_anime, default_typo, adapt_typo, default_line_height, high_line_height, default_theme, dark_theme, default_contrast, enforce_contrast, inverse_contrast');
       return $html;
   }
@@ -27,9 +27,9 @@ function disabled_accessibility_help($route_name, RouteMatchInterface $route_mat
 function disabled_accessibility_theme($existing, $type, $theme, $path)
 {
   $theme = [];
-  $theme['efil_accessibility_form'] = [
+  $theme['disabled_accessibility_form'] = [
     'render element' => 'form',
-    'template' => 'efil-accessibility-form',
+    'template' => 'disabled-accessibility-form',
   ];
   return $theme;
 }

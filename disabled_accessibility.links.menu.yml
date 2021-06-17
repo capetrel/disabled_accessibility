@@ -1,5 +1,5 @@
-efil_accessibility.settings:
-  title: 'Efil accessibility'
+disabled_accessibility.settings:
+  title: 'Disabled accessibility'
   description: 'A module for activate accessibility class and memorize them'
-  route_name: efil_accessibility.settings
+  route_name: disabled_accessibility.settings
   parent: system.admin_config_system

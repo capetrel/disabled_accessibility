@@ -1,9 +1,9 @@
 (function ($, Drupal, drupalSettings) {
   'use strict';
 
-  Drupal.behaviors.efilAccessibility = {
+  Drupal.behaviors.disabledAccessibility = {
     attach: function (context) {
-      $('#efil-accessibility-form', context).each(function () {
+      $('#disabled-accessibility-form', context).each(function () {
 
         let noBtns = $('.accessibility-no-buttons');
         if (noBtns.length !== 0 ) {
@@ -13,7 +13,7 @@
           let bodyClassList = document.body.classList;
           let body = $('body');
           let defaultLabels = $("input[id*='default'] + label");
-          let cookieDuration = parseInt(drupalSettings.efilAccessibilityCookieDuration);
+          let cookieDuration = parseInt(drupalSettings.disabledAccessibilityCookieDuration);
 
           let InputDefaultTypoId = '#edit-typo-default-typo';
           let InputAdaptTypoId = '#edit-typo-adapt-typo';

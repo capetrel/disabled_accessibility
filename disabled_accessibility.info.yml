@@ -1,6 +1,7 @@
-name: 'Efil Accessibility'
+name: 'Disabled Accessibility'
 type: module
 description: 'add class on body tag to manage accessibility with css'
-core: 8.x
-package: 'Efil'
-configure: efil_accessibility.settings
+version: 1.0
+core_version_requirement: ^8.8 || ^9
+package: 'Accessibility'
+configure: disabled_accessibility.settings

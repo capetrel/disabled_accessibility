@@ -2,11 +2,11 @@ form:
   version: 1.0
   css:
     layout:
-      css/efil_accessibility.css: {}
+      css/disabled_accessibility.css: {}
     theme:
-      css/efil_accessibility.css: {}
+      css/disabled_accessibility.css: {}
   js:
-    js/efil_accessibility.js: {}
+    js/disabled_accessibility.js: {}
   dependencies:
     - core/jquery
     - core/jquery.cookie
