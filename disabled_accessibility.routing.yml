@@ -1,0 +1,8 @@
+# Permet de configurer le module
+disabled_accessibility.settings:
+  path: '/admin/config/system/disabled_accessibility/config'
+  defaults:
+    _form: '\Drupal\disabled_accessibility\Form\DisabledAccessibilitySettingsForm'
+    _title: 'Choisir les boutons à afficher'
+  requirements:
+    _permission: 'administer site configuration'

@@ -1,0 +1,35 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function disabled_accessibility_help($route_name, RouteMatchInterface $route_match) {
+  $html = '';
+  switch ($route_name) {
+    case 'help.page.efil_accessibility':
+      $html = t('Module d\'accessibilité<br><br><a href="/admin/config/system/efil_accessibility/config" title="page de configuration">Page de configuration</a><br>');
+      $html .= t('Nom des classes css utilisé (body et input) : activate_anime, deactive_anime, default_typo, adapt_typo, default_line_height, high_line_height, default_theme, dark_theme, default_contrast, enforce_contrast, inverse_contrast');
+      return $html;
+  }
+  return $html;
+}
+
+/**
+ * Implements hook_theme().
+ *
+ * Register a module or theme's theme implementations.
+ * The implementations declared by this hook specify how a particular render array is to be rendered as HTML.
+ * See: https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21theme.api.php/function/hook_theme/8.2.x
+ * If you change this method, clear theme registry and routing table 'drush cc theme-registry' and 'drush cc router'.
+ */
+function disabled_accessibility_theme($existing, $type, $theme, $path)
+{
+  $theme = [];
+  $theme['efil_accessibility_form'] = [
+    'render element' => 'form',
+    'template' => 'efil-accessibility-form',
+  ];
+  return $theme;
+}

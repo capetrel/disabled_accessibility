@@ -1,0 +1,43 @@
+#disabled-accessibility-form {
+  .accessibility-form_content {
+    display: flex;
+    font-family: sans-serif;
+    font-size: 0.9em;
+    .form-composite {
+      border-right: solid 1px #4a4a4a;
+      border-radius: 0;
+      margin: 0 10px;
+      padding: 0 10px;
+      text-align: left;
+      &:first-child {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+        padding-right: 0;
+        border-right: none;
+      }
+      .form-radios {
+        display: flex;
+        input[type="radio"] {
+          display: none;
+        }
+        label.option {
+          display: block !important;
+          margin-left: 0;
+          margin-right: 15px;
+          color: darkgray;
+          cursor: pointer;
+          :last-child {
+            margin-right: 0;
+          }
+        }
+        label.option.is-on {
+          color: green;
+          cursor: default;
+        }
+      }
+    }
+  }
+}

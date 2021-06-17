@@ -1,0 +1,14 @@
+form:
+  version: 1.0
+  css:
+    layout:
+      css/efil_accessibility.css: {}
+    theme:
+      css/efil_accessibility.css: {}
+  js:
+    js/efil_accessibility.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.cookie
+    - core/drupal
+    - core/drupalSettings

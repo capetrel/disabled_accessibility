@@ -1,0 +1,10 @@
+<div class="accessibility-form">
+    <div class="accessibility-form_content">
+      {{ form.anime }}
+      {{ form.typo }}
+      {{ form.line_height }}
+      {{ form.theme }}
+      {{ form.contrast }}
+    </div>
+</div>
+  {{ form | without('anime', 'typo', 'line_height', 'theme', 'contrast') }}
