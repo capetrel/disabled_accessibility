@@ -2,10 +2,25 @@
 
 namespace Drupal\disabled_accessibility\Form;
 
+use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class DisabledAccessibilitySettingsForm extends ConfigFormBase {
+
+  /**
+   * Constructs a new EfilMdaleConfigForm object.
+   */
+  public function __construct(ConfigFactoryInterface $config_factory) {
+    parent::__construct($config_factory);
+  }
+
+  public static function create(ContainerInterface $container) {
+    return new static(
+      $container->get('config.factory'),
+    );
+  }
 
   protected function getEditableConfigNames()
   {
@@ -29,7 +44,10 @@ class DisabledAccessibilitySettingsForm extends ConfigFormBase {
     $form['allow_animation_buttons'] = [
       '#type' => 'radios',
       '#title' => $this->t('Afficher les choix de l\'animation'),
-      '#options' => ['allow_animation' => $this->t('Afficher'), 'disallow_animation' => $this->t('Masquer')],
+      '#options' => [
+        'allow_animation' => $this->t('Afficher'),
+        'disallow_animation' => $this->t('Masquer')
+      ],
       '#default_value' => is_null($config->get('allow_animation_buttons')) ? 'allow_animation' : $config->get('allow_animation_buttons'),
       '#weight' => '0',
     ];
@@ -37,28 +55,40 @@ class DisabledAccessibilitySettingsForm extends ConfigFormBase {
     $form['allow_typo_buttons'] = [
       '#type' => 'radios',
       '#title' => $this->t('Afficher les choix de typographie'),
-      '#options' => ['allow_typo' => $this->t('Afficher'), 'disallow_typo' => $this->t('Masquer')],
+      '#options' => [
+        'allow_typo' => $this->t('Afficher'),
+        'disallow_typo' => $this->t('Masquer')
+      ],
       '#default_value' => is_null($config->get('allow_typo_buttons')) ? 'allow_typo' : $config->get('allow_typo_buttons'),
       '#weight' => '1',
     ];
     $form['allow_line_height_buttons'] = [
       '#type' => 'radios',
       '#title' => $this->t('Afficher les choix de hauteur de ligne'),
-      '#options' => ['allow_line_height' => $this->t('Afficher'), 'disallow_line_height' => $this->t('Masquer')],
+      '#options' => [
+        'allow_line_height' => $this->t('Afficher'),
+        'disallow_line_height' => $this->t('Masquer')
+      ],
       '#default_value' => is_null($config->get('allow_line_height_buttons')) ? 'allow_line_height' : $config->get('allow_line_height_buttons'),
       '#weight' => '2',
     ];
     $form['allow_theme_buttons'] = [
       '#type' => 'radios',
       '#title' => $this->t('Afficher les choix du theme clair ou sombre'),
-      '#options' => ['allow_theme' => $this->t('Afficher'), 'disallow_theme' => $this->t('Masquer')],
+      '#options' => [
+        'allow_theme' => $this->t('Afficher'),
+        'disallow_theme' => $this->t('Masquer')
+      ],
       '#default_value' => is_null($config->get('allow_theme_buttons')) ? 'allow_theme' : $config->get('allow_theme_buttons'),
       '#weight' => '3',
     ];
     $form['allow_contrast_buttons'] = [
       '#type' => 'radios',
       '#title' => $this->t('Afficher les choix du contrast'),
-      '#options' => ['allow_contrast' => $this->t('Afficher'), 'disallow_contrast' => $this->t('Masquer')],
+      '#options' => [
+        'allow_contrast' => $this->t('Afficher'),
+        'disallow_contrast' => $this->t('Masquer')
+      ],
       '#default_value' => is_null($config->get('allow_contrast_buttons')) ? 'allow_contrast' : $config->get('allow_contrast_buttons'),
       '#weight' => '4',
     ];

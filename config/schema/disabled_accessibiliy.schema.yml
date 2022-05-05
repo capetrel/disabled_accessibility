@@ -1,0 +1,29 @@
+disabled_accessibiliy.settings:
+  type: config_object
+  label: 'Paramètres accessibilité'
+  mapping:
+    allow_animation_buttons:
+      type: string
+      label: "Afficher les choix de l'animation"
+      value: "Afficher"
+    allow_typo_buttons:
+      type: string
+      label: "Afficher les choix de l'animation"
+      value: "Afficher"
+    allow_line_height_buttons:
+      type: string
+      label: "Afficher les choix de hauteur de ligne"
+      value: "Afficher"
+    allow_theme_buttons:
+      type: string
+      label: "Afficher les choix du theme clair ou sombre"
+      value: "Afficher"
+    allow_contrast_buttons:
+      type: string
+      label: "Afficher les choix du contrast"
+      value: "Afficher"
+    cookie_duration_days:
+      type: integer
+      label: "Durée du cookie en jours"
+      value: 7
+
