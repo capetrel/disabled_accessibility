@@ -2,11 +2,11 @@ form:
   version: 1.0
   css:
     layout:
-      css/disabled_accessibility.css: {}
+      assets/css/disabled_accessibility.css: {}
     theme:
-      css/disabled_accessibility.css: {}
+      assets/css/disabled_accessibility.css: {}
   js:
-    js/disabled_accessibility.js: {}
+    assets/js/disabled_accessibility.js: {}
   dependencies:
     - core/jquery
     - core/jquery.cookie
